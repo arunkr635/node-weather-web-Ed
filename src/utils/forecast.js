@@ -8,9 +8,11 @@ const forecast = (latitude, longitude, callback) => {
     } else if (response.body.error) {
       callback("unable to find location", undefined);
     } else {
+      console.log(response.body.currently.humidity);
       callback(undefined, {
         temperature: response.body.currently.temperature,
-        percipitationProb: response.body.currently.precipProbability
+        percipitationProb: response.body.currently.precipProbability,
+        humidity: response.body.currently.humidity
       });
     }
   });

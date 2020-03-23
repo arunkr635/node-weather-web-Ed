@@ -26,7 +26,7 @@ weatherForm.addEventListener("submit", e => {
       if (data.error) {
         return (result.textContent = data.error);
       }
-      result.textContent = `location : ${data.location}, Temperature :  ${data.Data.temperature}`;
+      result.textContent = `location : ${data.location}, Temperature :  ${data.Data.temperature},  Humidity: ${data.Data.humidity}`;
       console.log(data);
     });
   });
